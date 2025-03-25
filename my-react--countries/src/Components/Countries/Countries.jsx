@@ -10,17 +10,34 @@ const Countries = () => {
         .then (data=>setCountries(data))
       
     },[]);
+
+    const [mywishList,setMywishList]=useState([]);
+
+    const handelWishList=(country)=>{
+        setMywishList([...mywishList,country])
+        alert('Wishlist added')
+    }
     
     return (
-        <div className="countriesStyle" > 
-            <h1 >
-                {countries.map(country=><Country country={country}>
+        <div>
+            <h1>My Wishlist : </h1>
+            {mywishList.map(country=> <li>{country.name.common}</li>)}
+               <div className="countriesStyle" > 
+          
+          {countries.map(country=><Country 
+          country={country}
+          handelWishList={handelWishList}
+          
+          >
 
-                </Country>
-                )}
-            </h1>
-            
+          </Country>
+          )}
+ 
+      
+  </div>
+
         </div>
+     
     );
 };
 

@@ -6,9 +6,10 @@ function App() {
 
   return (
     <>
+       <h1>React Countries</h1>
     <Countries></Countries>
     
-      <h1>Vite + React</h1>
+   
       
       
     </>

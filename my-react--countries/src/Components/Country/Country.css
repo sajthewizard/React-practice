@@ -3,8 +3,17 @@
     padding: 1px;
     margin: 1px;
     max-width: 500px;
-    display: flex;
+   
     
+}
+.visited{
+    background-color: aqua;
+}
+.first
+{
+    display: flex;
+    padding: 1px;
+    margin: 1px;
 }
 .pic{
     width: 50px;
